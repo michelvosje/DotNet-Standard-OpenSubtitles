@@ -6,7 +6,7 @@ This is a .Net Standard 2.0 client library implementation for the [REST API](htt
 
 ### 1.1 Supported Open Subtitles v1 API features
 
-The following functionality is supported:
+The following functionality are supported:
 
 * [Authentication](https://www.opensubtitles.com/docs/api/html/index.htm#create-session-and-token)
 * [Download subtitle file](https://www.opensubtitles.com/docs/api/html/index.htm#download-subtitle-file)
