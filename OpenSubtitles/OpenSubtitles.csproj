@@ -1,7 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0-alpha</Version>
+    <Authors>michelvosje</Authors>
+    <Company />
+    <Description>.Net Standard 2.0 client library implementation for the REST API provided by OpenSubtitles.com</Description>
+    <Copyright>michelvosje</Copyright>
+    <PackageLicenseFile>license.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/michelvosje/DotNet-Standard-OpenSubtitles</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/michelvosje/DotNet-Standard-OpenSubtitles</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>opensubtitles</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,6 +22,13 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.8" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\license.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
