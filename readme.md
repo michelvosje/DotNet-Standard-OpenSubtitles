@@ -17,6 +17,6 @@ On request the missing features can be implemented.
 
 ## 2. Projects using Open Subtitles library
 
-The following projects use this library:
+This following projects use this library:
 
-* Subtitle Download CLI app
+* [Subtitle Downloader](https://github.com/michelvosje/SubtitleDownloader)
