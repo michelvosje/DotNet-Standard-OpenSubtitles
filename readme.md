@@ -4,9 +4,9 @@
 
 This is a .Net Standard 2.0 client library implementation for the [REST API](https://www.opensubtitles.com/docs/api/html/index.htm) provided by [OpenSubtitles.com](https://opensubtitles.com).
 
-### 1.1 Supported Open Subtitles v1 API features
+### 1.1 Supported Open Subtitles API features
 
-The following functionality are supported:
+The following features are supported:
 
 * [Authentication](https://www.opensubtitles.com/docs/api/html/index.htm#create-session-and-token)
 * [Download subtitle file](https://www.opensubtitles.com/docs/api/html/index.htm#download-subtitle-file)
@@ -15,7 +15,15 @@ The following functionality are supported:
 
 On request the missing features can be implemented.
 
-## 2. Projects using Open Subtitles library
+## 2. NuGet package
+
+The [NuGet package](https://www.nuget.org/packages/OpenSubtitles) can be installed using the NuGet Package Manager:
+
+```PM
+Install-Package OpenSubtitles
+```
+
+## 3. Projects using Open Subtitles library
 
 This following projects use this library:
 
