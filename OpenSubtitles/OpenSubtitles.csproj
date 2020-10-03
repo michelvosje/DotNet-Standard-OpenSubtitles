@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0-alpha</Version>
+    <Version>1.0.0</Version>
     <Authors>michelvosje</Authors>
     <Company />
     <Description>.Net Standard 2.0 client library implementation for the REST API provided by OpenSubtitles.com</Description>
