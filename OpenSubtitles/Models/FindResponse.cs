@@ -18,7 +18,6 @@ namespace OpenSubtitles.Models
         [JsonProperty("page")]
         public int Page { get; set; }
 
-
         [JsonProperty("data")]
         public List<DataModel> Data { get; set; }
 
@@ -27,6 +26,7 @@ namespace OpenSubtitles.Models
         {
             [JsonProperty("id")]
             public string Id { get; set; }
+
             [JsonProperty("type")]
             public string Type { get; set; }
 
@@ -116,7 +116,7 @@ namespace OpenSubtitles.Models
         [JsonObject]
         public class UploaderModel
         {
-            [JsonProperty("id")]
+            [JsonProperty("uploader_id")]
             public string Id { get; set; }
 
             [JsonProperty("name")]
@@ -185,7 +185,7 @@ namespace OpenSubtitles.Models
         [JsonObject]
         public class FileModel
         {
-            [JsonProperty("id")]
+            [JsonProperty("file_id")]
             public string Id { get; set; }
 
             [JsonProperty("cd_number")]
