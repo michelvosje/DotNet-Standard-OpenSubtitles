@@ -18,7 +18,7 @@ namespace OpenSubtitles.Interfaces
         /// </summary>
         /// <param name="downloadRequest">Authentication information.</param>
         /// <returns>Authentication token.</returns>
-        Task<AuthenticationResponse> LoginAsync(AuthenticationRequest downloadRequest);
+        Task<AuthenticationResponse> LoginAsync(AuthenticationRequest downloadRequest, string apiKey);
 
         /// <summary>
         /// Requests download information of a specific subtitle.

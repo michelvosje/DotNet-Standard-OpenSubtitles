@@ -21,6 +21,8 @@ namespace OpenSubtitles
         private static readonly string BASE_URL =
             $"{OpenSubtitlesConstants.SCHEMA}://{OpenSubtitlesConstants.HOST}/{OpenSubtitlesConstants.API_V1_ROUTE}";
 
+        private const string HEAD_API_KEY = "Api-Key";
+
         private readonly ILogger<OpenSubtitlesApi> logger;
 
         /// <summary>
@@ -58,7 +60,8 @@ namespace OpenSubtitles
         /// <param name="authenticationRequest">Authentication information.</param>
         /// <returns>Authentication token.</returns>
         public async Task<AuthenticationResponse> LoginAsync(
-            AuthenticationRequest authenticationRequest)
+            AuthenticationRequest authenticationRequest,
+            string apiKey)
         {
             Logout();
 
@@ -66,6 +69,11 @@ namespace OpenSubtitles
             var requestContent = new StringContent(JsonConvert.SerializeObject(authenticationRequest));
 
             requestContent.Headers.ContentType = MediaTypeHeaderValue.Parse(OpenSubtitlesConstants.CONTENT_TYPE);
+
+            if (httpClient.DefaultRequestHeaders.Contains(HEAD_API_KEY))
+                httpClient.DefaultRequestHeaders.Remove(HEAD_API_KEY);
+
+            httpClient.DefaultRequestHeaders.Add(HEAD_API_KEY, apiKey);
 
             logger.LogInformation($"Sending login request for user: {authenticationRequest.Username}");
 
@@ -190,7 +198,7 @@ namespace OpenSubtitles
                 AuthenticationResponse = authenticationResponse;
 
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
-                    OpenSubtitlesConstants.TOKEN_HEADER, AuthenticationResponse.Token
+                    OpenSubtitlesConstants.TOKEN_HEADER, $"Bearer {AuthenticationResponse.Token}"
                 );
 
                 logger.LogInformation($"Logged in user with id: {AuthenticationResponse.User.UserId}.");
