@@ -58,6 +58,7 @@ namespace OpenSubtitles
         /// Requests authentication token for a specific user.
         /// </summary>
         /// <param name="authenticationRequest">Authentication information.</param>
+        /// <param name="apiKey">API key.</param>
         /// <returns>Authentication token.</returns>
         public async Task<AuthenticationResponse> LoginAsync(
             AuthenticationRequest authenticationRequest,
